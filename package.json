@@ -1,0 +1,29 @@
+{
+  "name": "react-my-games-svc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alanleite/react-my-games-svc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alanleite/react-my-games-svc/issues"
+  },
+  "homepage": "https://github.com/alanleite/react-my-games-svc#readme",
+  "dependencies": {
+    "hapi": "^16.5.2",
+    "hapi-auth-jwt2": "^7.4.1",
+    "hapi-boom-decorators": "^3.0.1",
+    "jsonwebtoken": "^8.1.1",
+    "mongoose": "^5.0.2",
+    "password-hash": "^1.2.2",
+    "uuid": "^3.2.1"
+  }
+}
