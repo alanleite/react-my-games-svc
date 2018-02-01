@@ -1,9 +1,15 @@
 const server = require('./server')
+const init = require('./server/database/initial')
 
-server.start(function (err) {
-    if (err) {
-        console.error('Error: ', err)
-    } else {
-        console.log(`Server started at: ${server.info.uri}`)
-    }
+init().then(() => {
+    server.start(function (err) {
+        if (err) {
+            console.error('Error: ', err)
+        } else {
+            console.log(`Server started at: ${server.info.uri}`)
+        }
+    })
+}).catch(err => {
+    console.log(`Error to init database: `, err)
 })
+

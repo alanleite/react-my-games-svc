@@ -27,7 +27,7 @@ module.exports = async function (request, reply) {
         }
 
     } catch (error) {
-        console.log(error)
+        reply.badImplementation(error)
     }
 
 

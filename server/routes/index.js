@@ -29,22 +29,22 @@ module.exports = [
         }
     },
     {
-        method: 'put',
-        path: '/my-games',
+        method: 'post',
+        path: '/my-games/{gameId}',
         config: {
             handler: add
         }
     },
     {
-        method: 'post',
-        path: '/my-games',
+        method: 'put',
+        path: '/my-games/{myGameId}',
         config: {
             handler: edit
         }
     },
     {
         method: 'delete',
-        path: '/my-games',
+        path: '/my-games/{myGameId}',
         config: {
             handler: del
         }
