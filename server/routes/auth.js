@@ -23,7 +23,7 @@ module.exports = async function (request, reply) {
             reply({ token })
         }
         else {
-            reply.notAuthorized()
+            reply.unauthorized()
         }
 
     } catch (error) {

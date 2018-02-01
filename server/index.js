@@ -18,6 +18,21 @@ server.connection({
 });
 
 server.register([
+    { register: require('inert') },
+    { register: require('vision') },
+    {
+        register: require('hapi-swagger'), options: {
+            securityDefinitions: {
+                jwt: {
+                    type: 'apiKey',
+                    name: 'Authorization',
+                    in: 'header'
+                }
+            },
+            cors: true,
+            documentationPath: '/docs'
+        }
+    },
     { register: require('hapi-auth-jwt2') },
     { register: require('hapi-boom-decorators') }
 ], err => {
